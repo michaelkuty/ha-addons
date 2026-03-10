@@ -4,5 +4,12 @@ FROM ${BUILD_FROM}
 
 LABEL maintainer="Bigred <bigred10151990@gmail.com>"
 
-EXPOSE 80
+RUN apk add --no-cache jq
 
+COPY run.sh /run.sh
+RUN chmod +x /run.sh
+
+ENTRYPOINT []
+CMD ["/run.sh"]
+
+EXPOSE 80

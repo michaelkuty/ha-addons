@@ -16,12 +16,16 @@ options:
   DATABASE_USERNAME: booklore
   DATABASE_PASSWORD: your_secure_password
   SWAGGER_ENABLED: "false"
+  env_vars: []
 schema:
   TZ: str
   DATABASE_URL: str
   DATABASE_USERNAME: str
   DATABASE_PASSWORD: password
   SWAGGER_ENABLED: str
+  env_vars:
+    - name: str
+      value: str
 ports:
   6060/tcp: 6060
 ports_description:
